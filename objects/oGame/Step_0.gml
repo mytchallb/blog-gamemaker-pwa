@@ -38,7 +38,7 @@ if (!jumping) {
 	}
 }
 
-show_debug_message("C")
+
 
 
 // Move obstacles and remove them from array once they leave the room
@@ -81,5 +81,3 @@ if (gameOver) {
 if !gameOver myScore+=1
 if keyboard_check_pressed(vk_escape) game_end()
 if keyboard_check_pressed(ord("R")) game_restart()
-
-show_debug_message("D")

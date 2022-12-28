@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Jump over the red lines!" />
+    <link rel="icon" type="image/svg+xml" href="favicon.webp" />
+
+    <!-- document.querySelector('meta[name="description"]').setAttribute("content", _desc);
+                        meta[property="og:title"] -->
+
+
+    <!-- Set the title bar of the page -->
+    <title>Point Jump</title>
+
+    <!-- Set the background colour of the document -->
+    <style>
+        body {
+            background: #000000;
+            color: #cccccc;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: 0;
+        }
+
+        canvas {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: 0;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            image-rendering: optimizeSpeed;
+            -webkit-interpolation-mode: nearest-neighbor;
+            -ms-touch-action: none;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        :-webkit-full-screen #canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        div.gm4html5_div_class {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        /* START - Login Dialog Box */
+        div.gm4html5_login {
+            padding: 20px;
+            position: absolute;
+            border: solid 2px #000000;
+            border-radius: 15px;
+            box-shadow: #101010 20px 20px 40px;
+
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        div.gm4html5_cancel_button {
+            float: right;
+        }
+
+        div.gm4html5_login_button {
+            float: left;
+        }
+
+        div.gm4html5_login_header {
+            text-align: center;
+        }
+
+        /* END - Login Dialog Box */
+        :-webkit-full-screen {
+            width: 100%;
+            height: 100%;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gm4html5_div_class" id="gm4html5_div_id">
+        <script>
+            const url = window.location.href
+            const swUrl = url + 'serviceWorker.js'
+
+            // Registering Service Worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register(swUrl);
+            }
+
+            document.addEventListener('touchstart', e => {
+                e.preventDefault();
+            }, { passive: false })
+        </script>
+        <!-- Create the canvas element the game draws to -->
+        <canvas id="canvas" width="1366" height="768">
+            <!-- <canvas id="canvas" width="1920" height="1080"> -->
+            <p>Your browser doesn't support HTML5 canvas.</p>
+        </canvas>
+    </div>
+
+    <!-- Run the game code -->
+    <script type="text/javascript" src="html5game/chunkie-run.js?C=0"></script>
+    <script>window.onload = GameMaker_Init</script>
+</body>
+<img style="width:0px; height:0px;" src="html5game/load.png" />
+
+</html>
