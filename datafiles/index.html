@@ -107,17 +107,10 @@
 <body>
     <div class="gm4html5_div_class" id="gm4html5_div_id">
         <script>
-            const url = window.location.href
-            const swUrl = url + 'serviceWorker.js'
-
-            // Registering Service Worker
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register(swUrl);
-            }
-
-            document.addEventListener('touchstart', e => {
-                e.preventDefault();
-            }, { passive: false })
+            // Register the Service Worker script
+                if ('serviceWorker' in navigator) navigator.serviceWorker.register(
+                    window.location.href + 'serviceWorker.js'
+                );
         </script>
         <!-- Create the canvas element the game draws to -->
         <canvas id="canvas" width="1366" height="768">

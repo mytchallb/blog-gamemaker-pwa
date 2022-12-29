@@ -1,15 +1,7 @@
-const cacheName = 'cache-v1'
-// const contentToCache = [
-//     'options.ini',
-//     'index.html',
-//     'favicon.ico',
-//     '/html5game/chunkie-run_texture_0.png',
-//     '/html5game/chunkie-run_texture_1.png',
-//     '/html5game/chunkie-run_texture_2.png',
-//     '/html5game/chunkie-run_texture_3.png',
-//     '/html5game/chunkie-run.js',
-//     '/html5game/tph_custom_script.js',
-// ]
+const cacheName = 'PWA-v1'
+
+/*
+You can use this function to cache an array of files upon install
 
 self.addEventListener('install', (e) => {
     console.log('[Service Worker] Install');
@@ -19,6 +11,7 @@ self.addEventListener('install', (e) => {
         // await cache.addAll(contentToCache);
     })());
 });
+*/
 
 // Fetching content using Service Worker
 self.addEventListener('fetch', (e) => {
